@@ -3,8 +3,7 @@ import ElectronicDetails from "../Components/ElectronicDetails";
 
 function Show() {
   return(
-    <div>
-      <h2>Show</h2>
+    <div className="bg-gray-100 min-h-screen">
       <ElectronicDetails />
     </div>
   );

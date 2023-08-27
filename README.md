@@ -1,6 +1,1 @@
 # electronics-store-frontend
-
-
-
-
-s

@@ -46,73 +46,83 @@ function NewForm() {
 
 
 
+
   return (
-    <div className="container mx-auto p-4">
-      <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
+    <div className="py-8 text-left ">
+      <div style={{ width: '800px' }} className="container mx-auto bg-white rounded-xl shadow-md p-4">
+        <form onSubmit={handleSubmit} className="space-y-6 px-6 py-8 ">
+          <div className="flex">
 
-        {/* Image URL */}
-        <div className="flex justify-center mt-4">
-          <img src={electronic.image_url} alt={electronic.name} className="w-full md:w-1/2 mx-auto mb-4 rounded" />
-        </div>
+            {/* image left */}
+            <div className="mr-8">
+              <img src={electronic.image_url || "https://via.placeholder.com/200"} alt={electronic.name} className="w-64 h-64 rounded" />
+            </div>
 
-        <div className="md:col-span-2">
-          <label htmlFor="image_url" className="block text-gray-700 font-medium">Image URL:</label>
-          <input type="url" id="image_url" value={electronic.image_url} onChange={handleInput} required 
-              placeholder="http://example.com/image.jpg"
-              className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300"/>
-        </div>
+            <div className="flex-1 space-y-6">
+              {/* image url */}
+              <div>
+                <label htmlFor="image_url" className="block text-gray-700 font-medium">Image URL:</label>
+                <input type="url" id="image_url" value={electronic.image_url} onChange={handleInput} required 
+                    placeholder="http://example.com/image.jpg"
+                    className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300 p-2"/>
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Category */}
-          <div>
-            <label htmlFor="category" className="block text-gray-700 font-medium">Category:</label>
-            <select value={electronic.category} onChange={handleInput} id="category" required 
-                    className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300">
-                {categoryList.map((category, index) => (
-                    <option key={index} value={category}>
-                        {category}
-                    </option>
-                ))}
-            </select>
-          </div>
+              {/* category */}
+              <div>
+                <label htmlFor="category" className="block text-gray-700 font-medium">Category:</label>
+                <select value={electronic.category} onChange={handleInput} id="category" required 
+                        className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300 p-2">
+                    {categoryList.map((category, index) => (
+                        <option key={index} value={category}>
+                            {category}
+                        </option>
+                    ))}
+                </select>
+              </div>
 
-          {/* Brand */}
-          <div>
-            <label htmlFor="brand" className="block text-gray-700 font-medium">Brand:</label>
-            <input type="text" id="brand" value={electronic.brand} onChange={handleInput} required 
-                   className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300"/>
-          </div>
+              {/* brand and price */}
+              <div className="flex justify-between space-x-4">
+                {/* brand */}
+                <div className="flex-1">
+                  <label htmlFor="brand" className="block text-gray-700 font-medium">Brand:</label>
+                  <input type="text" id="brand" value={electronic.brand} onChange={handleInput} required 
+                        className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300 p-2"/>
+                </div>
 
-          {/* Name */}
+                {/* price */}
+                <div className="flex-1">
+                  <label htmlFor="price" className="block text-gray-700 font-medium">Price:</label>
+                  <input type="number" id="price" value={electronic.price || ""} onChange={handleInput} required 
+                        className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300 p-2"/>
+                </div>
+              </div>
+
+
+            </div> 
+          </div> 
+
+          {/* name */}
           <div>
             <label htmlFor="name" className="block text-gray-700 font-medium">Title:</label>
             <input type="text" id="name" value={electronic.name} onChange={handleInput} required 
-                   className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300"/>
+                  className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300 p-2"/>
           </div>
 
-          {/* Description */}
-          <div className="md:col-span-2">
-            <label htmlFor="description" className="block text-gray-700 font-medium">Description:</label>
-            <input type="text" id="description" value={electronic.description} onChange={handleInput} required 
-                   className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300"/>
-          </div>
-
-          {/* Price */}
+          {/* description */}
           <div>
-            <label htmlFor="price" className="block text-gray-700 font-medium">Price:</label>
-            <input type="number" id="price" value={electronic.price || ""} onChange={handleInput} required 
-                   className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300"/>
+            <label htmlFor="description" className="block text-gray-700 font-medium">Description:</label>
+            <textarea id="description" value={electronic.description} onChange={handleInput} required 
+                  className="mt-1 block w-full bg-gray-100 rounded-md border border-gray-300 h-32 resize-y p-2"></textarea>
           </div>
 
-        </div>
-
-
-        <div className="flex justify-center mt-4">
-          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Add Items
-          </button>
-        </div>
-      </form>
+          {/* button */}
+          <div className="flex justify-center mt-4">
+            <button type="submit" className="bg-blue-600 text-white px-6 py-4 rounded hover:bg-blue-700 w-full">
+              Add New Product
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

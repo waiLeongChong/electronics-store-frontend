@@ -53,26 +53,26 @@ function Electronics() {
 
   return (
   <div className="flex flex-col md:flex-row">
-      <SideBar selectedCategory={selectedCategory} onCategoryClick={handleCategoryFilter} />
+    <SideBar selectedCategory={selectedCategory} onCategoryClick={handleCategoryFilter} />
 
-      <div className="p-4 flex-1">
-          <form onSubmit={handleSearch} className="mb-4 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
-              <input
-                  type="text"
-                  placeholder="Search brand and category"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="p-2 border rounded-md flex-grow"
-              />
-              <button type="submit" className="bg-blue-500 text-white p-2 rounded-md mt-2 sm:mt-0">Search</button>
-          </form>
+    <div className="p-4 flex-1">
+      <form onSubmit={handleSearch} className="mb-4 flex flex-col px-3 sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
+        <input
+          type="text"
+          placeholder="Search brand and category"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="p-2 border rounded-md flex-grow my-4"
+        />
+        <button type="submit" className="bg-blue-500 text-white p-2 rounded-md mt-2 sm:mt-0">Search</button>
+      </form>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
-              {electronics.map((electronicsItem) =>
-                  <Electronic key={electronicsItem.id} electronic={electronicsItem}/>
-              )}
-          </div>
+      <div className="px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
+        {electronics.map((electronicsItem) =>
+            <Electronic key={electronicsItem.id} electronic={electronicsItem}/>
+        )}
       </div>
+    </div>
   </div>
   );
 }

@@ -31,7 +31,7 @@ function Cart() {
               <div className="flex-1 flex flex-col sm:flex-row items-center justify-between pl-6">
                 <div className="space-y-2">
                   <span className="block font-semibold text-lg">{item.name}</span>
-                  <span className="block text-sm text-gray-600">{item.brand}</span>
+                  <span className="block text-sm text-left text-gray-600">{item.brand}</span>
                 </div>
                 <div className="flex items-center space-x-6">
                   <div className="flex items-center space-x-2">
