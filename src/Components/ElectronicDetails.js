@@ -61,22 +61,22 @@ function ElectronicDetails() {
           </div>
 
 
-          <div className="flex flex-wrap space-y-2 md:space-y-0 md:space-x-2">
+          <div className="flex flex-wrap space-y-2 md:space-y-0 md:space-x-2 md:space-y-2 sm:flex-row md:block md:flex-wrap">
             <button 
               onClick={() => navigate("/electronics")}
-              className="bg-blue-400 text-white px-8 py-2 rounded hover:bg-blue-600 w-full md:w-auto mt-2 md:mt-0"
+              className="bg-blue-400 text-white px-16 py-2 rounded hover:bg-blue-600 w-full md:w-auto mt-2 md:mt-0 md:px-12"
             >
               BACK
             </button>
             <button 
               onClick={() => navigate(`/electronics/${id}/edit`)}
-              className="bg-blue-400 text-white px-8 py-2 rounded hover:bg-blue-600 w-full md:w-auto mt-2 md:mt-0"
+              className="bg-blue-400 text-white px-8 py-2 rounded hover:bg-blue-600 w-full md:w-auto mt-2 md:mt-0 md:px-12"
             >
               EDIT ITEM
             </button>
             <button 
               onClick={deleteItem}
-              className="bg-blue-400 text-white px-8 py-2 rounded hover:bg-blue-600 w-full md:w-auto mt-2 md:mt-0"
+              className="bg-blue-400 text-white px-8 py-2 rounded hover:bg-blue-600 w-full md:w-auto mt-2 md:mt-0 md:px-28"
             >
               DELETE ITEM
             </button>

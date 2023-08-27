@@ -67,7 +67,7 @@ function Electronics() {
         <button type="submit" className="bg-blue-500 text-white p-2 rounded-md mt-2 sm:mt-0">Search</button>
       </form>
 
-      <div className="px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
+      <div className="px-3 pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
         {electronics.map((electronicsItem) =>
             <Electronic key={electronicsItem.id} electronic={electronicsItem}/>
         )}

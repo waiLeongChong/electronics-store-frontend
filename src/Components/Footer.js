@@ -14,7 +14,7 @@ function Footer() {
             <Link to="/" className="text-white hover:text-gray-200 text-4xl font-black">
               <FontAwesomeIcon icon={faCube} /> electro.
             </Link>
-            <p className="mt-2 w-full md:w-3/4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Sed non tortor vitae erat lacinia porttitor. Quisque sit amet aliquet leo. Morbi quis massa id mi pellentesque placerat. Nam scelerisque sit amet ligula eget efficitur.</p>
+            <p className="mt-2 w-full md:w-3/4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Sed non tortor vitae erat lacinia porttitor. Quisque sit amet aliquet leo. Morbi quis massa id mi pellentesque placerat</p>
             <p className="mt-6"><span className="font-bold text-blue-900">© 2023 electro.</span> All rights reserved.</p>
           </div>
 
